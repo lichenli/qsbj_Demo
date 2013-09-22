@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+        <title>用户反馈</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    
+    <body>
+        <form action="#PH_FEEDBACK_URL#" method="post">
+            <div class="input-row">
+                <span>您的想法和建议：</span>
+                <textarea name="content" rows="4"></textarea>
+            </div>
+            <div class="contact-row">
+                <span>联系方式：(可选)</span>
+                <input name="contact" type="email">
+            </div>
+            <input name="source" style="display:none;" value="#PH_SOURCE#">
+            <input name="device" style="display:none;" value="#PH_DEVICE#">
+            <input name="userid" style="display:none;" value="#PH_USERID#">    
+                <div class="button"><input type="submit" value="发送反馈" onclick="this.value='正在发送...';result = (this.form.onsubmit ? (this.form.onsubmit() ? this.form.submit() : false) : this.form.submit());return result;"></div>
+        </form>
+    </body>
+</html>
